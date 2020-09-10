@@ -7,6 +7,6 @@ export default function formatNumber(number, option) {
   //
   // * Please implement the function and pass all the tests in format_number_spec.js.
   // * Please do NOT modify the signature of the function.
-
-  throw new Error('Please delete this line and implement the function');
+  let res = `${number.toFixed(2)}`;
+  return (option instanceof Object && 'currency' in option && option.currency) ? `$ ${res}` : res;
 }
